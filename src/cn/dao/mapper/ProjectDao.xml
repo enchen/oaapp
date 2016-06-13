@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dao.ProjectDao">
+	<!-- 插入新工程 返回自增的project_id字段-->
+	<insert id="createProject" parameterType="Project" >
+	<selectKey order="AFTER" keyProperty="projectId" resultType="Integer">
+    SELECT currval('project_project_id_seq')
+  </selectKey>
+		insert into
+		project(project_name,start_time,plan_end_time,project_content,state)
+		values(#{projectName},#{startTime},#{planEndTime},#{projectContent},0)
+		returning project_id 
+	</insert>
+
+	<!-- 更新项目信息 -->
+	<update id="updateProject">
+		update project
+		set project_name=#{projectName},
+		start_time=#{startTime},
+		plan_end_time=#{planEndTime},
+		project_content=#{projectContent},
+		state=#{state}
+		where
+		project_id=#{projectId}
+	</update>
+
+
+	<!-- 管理员查询项目分类 count计算结果为long 需要取整 -->
+	<select id="getProjectSort" resultType="java.util.HashMap">
+		select state, count(*) count
+		from project
+		group by state
+	</select>
+	<!-- 插入项目关联人员信息 -->
+	<insert id="batchInsertRelatedPerson" parameterType="java.util.List">
+		insert into project_person(project_id,user_id,position)
+		values
+		<foreach collection="list" item="item" index="index"
+			separator=",">
+			(#{item.projectId},#{item.userId},#{item.position})
+		</foreach>
+	</insert>
+	
+	<!-- 根据项目状态查询 -->
+	<select id="getProjects" resultType="Project" >
+	select
+	 project_id,
+	 project_name,
+	start_time,
+	plan_end_time,
+	end_time
+	from project
+	where state=#{0}
+	order by create_time desc
+	</select>
+	<select id="getChargedProjects" resultType="Project">
+	SELECT project_id,project_name,plan_end_time,project_content,state
+ from project 
+where project_id
+in(
+SELECT project_id from project_person 
+where user_id=#{0} 
+and position=1
+)
+and state in(0,2,3)
+ ORDER BY state,create_time
+	</select>
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="cn.dao.UserDao">
+  <select id="login" resultType="User">
+   select id,name,is_admin
+   from users
+   where name=#{0} and pass=#{1}
+  </select>
+  
+  <update id="updatePass" parameterType="User" >
+  update users 
+  set pass=#{pass} 
+  where
+   name=#{name} 
+  </update>
+  
+   <select id="getUsers" resultType="User">
+   select id,name
+   from users
+  </select>
+  
+     <select id="getProjectUsers" resultType="User">
+  SELECT a.name,a.id
+from users a,project_person b
+where b.project_id=#{0}
+and a.id=b.user_id
+  </select>
+  
+  <select id="iskeyUser" resultType="java.lang.Integer">
+  select count(*) from project_person 
+  where user_id=#{0} 
+  and project_id=#{1} 
+  and position=1
+  </select>
+  </mapper>

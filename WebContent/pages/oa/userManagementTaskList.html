@@ -1,0 +1,13 @@
+<div style="width: 100%;">
+
+
+    <div ng-repeat="task in lists">
+        <div id="taskList" ng-click="taskClik(task)" >
+       <div> {{task.name}}</div>
+            <div>  {{task.taskName}}</div>
+                <div> {{task.planEndTime  | date:'yyyy-MM-dd'}}</div>
+        </div>
+    </div>
+
+
+</div>

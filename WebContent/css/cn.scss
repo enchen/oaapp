@@ -1,0 +1,38 @@
+@import "navigator.scss";
+@import "admin-management.scss";
+@import "user-management.scss";
+
+body
+{
+  padding: 0;
+  font-size:20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#main
+{
+  margin-top: $navigator-height;
+  color:darkred;
+}
+#stage
+{
+  margin-top: $navigator-height;
+}
+/*登陆样式*/
+.bb-middle
+{
+  color:black;
+  margin-left:auto;
+  margin-right: auto;
+  width:500px;
+  height:250px;
+  margin-top:200px;
+  background-color:transparent;
+}
+.fullWidth
+{
+  width:100%;
+}
+.center
+{
+  text-align: center;
+}

@@ -1,0 +1,74 @@
+@charset "UTF-8";
+#bg {
+  animation: myfirst 13s;
+  -moz-animation: myfirst 13s;
+  /* Firefox */
+  -webkit-animation: myfirst 13s;
+  /* Safari 和 Chrome */
+  -o-animation: myfirst 3s;
+  /* Opera */
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+#qq {
+  -moz-animation: circle 3s;
+  animation: circle 3s;
+  -webkit-animation: circle 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+#qq2 {
+  -moz-animation: circle 3s;
+  animation: circle 3s;
+  -webkit-animation: circle 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+#qq3 {
+  -moz-animation: words 13s;
+  animation: words 13s;
+  -webkit-animation: words 13s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+@keyframes myfirst {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: -600px 0px; } }
+@keyframes circle {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+@keyframes words {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes myfirst {
+  from {
+    background-position: 0px 0px; }
+  to {
+    background-position: -600px 0px; } }
+@-webkit-keyframes circle {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+@-webkit-keyframes words {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=cn.css.map */

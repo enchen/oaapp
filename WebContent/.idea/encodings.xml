@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/css/admin-management.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/cn.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/navigator.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/oa/adminControllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/oa/directives.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/oa/filter.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/oa/services.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/oa/userControllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pages/oa/adminManagement.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pages/oa/userManagement.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pages/oa/userManagementTaskList.html" charset="UTF-8" />
+  </component>
+</project>

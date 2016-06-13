@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="oa.main">
+  <head>
+  <meta charset="UTF-8">
+    <title>OA系统</title>
+    <link href="css/bootstrap.231.min.css" rel="stylesheet">
+    <link href="css/cn.css" rel="stylesheet">
+  </head>
+  <body ng-controller="mainCtrl">
+
+  <div id="navigator">
+    <div class="col-md-1">任务<span>&nbsp;6</span></div>
+    <div class="col-md-1">项目<span>&nbsp;6</span></div>
+    <div class="col-md-1" ng-click="management()">管理<span>&nbsp;6</span></div>
+    <div class="col-md-1">周报<span>&nbsp;6</span></div>
+    <div class="col-md-1">报销<span>&nbsp;6</span></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-1" ng-click="quit()">登出</div>
+  </div>
+<div ui-view="main" id="stage">
+</div>   
+<script  src="framework/angular.min.js"></script>
+<script  src="framework/ui-router.js"></script>
+<script  src="framework/angular-animate.min.js"></script>
+<script  src="framework/ui-bootstrap-0.14.3.min.js"></script>
+  <script src="framework/boostrapadd.js"></script>
+<script  src="framework/scrollpoint.min.js"></script>
+<script  src="js/oa/app.js"></script>
+<script  src="js/oa/services.js"></script>
+<script  src="js/oa/controllers.js"></script>
+  <script src="js/oa/adminControllers.js"></script>
+  <script src="js/oa/userControllers.js"></script>
+<script  src="js/oa/directives.js"></script>
+<script  src="js/oa/filter.js"></script>
+  </body>
+</html>

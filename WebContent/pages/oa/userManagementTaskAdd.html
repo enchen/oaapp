@@ -1,0 +1,24 @@
+<div>任务名称：</div>
+<input type="text" ng-model="taskName">
+
+<div>负责人：</div>
+<select class="form-control" style="width:30%;margin-left:30px;" ng-model="selectedPerson"  ng-options="person.name for person in persons">
+    <option></option>
+</select>
+<div>详情描述:</div>
+<textarea ng-model="taskContent"></textarea>
+<div>预计完成日期:</div>
+<!-- 时间选择 -->
+<div class="timePiker">
+    <p class="input-group">
+        <input type="date" class="form-control" uib-datepicker-popup ng-model="dt" is-open="status.opened" datepicker-options="dateOptions"  ng-required="true" close-text="关闭" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+    </p>
+
+</div>
+<div>预期花费时间（小时）:</div>
+<input type="text" ng-model="planUseTime">
+
+<div class="btn-success btn create-task" ng-click="saveNewTask()">建立</div>

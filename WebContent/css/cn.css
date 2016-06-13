@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/*导航栏样式*/
+#navigator {
+  background-color: #757575;
+  opacity: 0.7;
+  position: fixed;
+  height: 40px;
+  top: 0px;
+  width: 100%; 
+  }
+  #navigator div {
+    cursor: pointer;
+    font-size: 26px;
+    text-align: center;
+    color: white; }
+  #navigator div:hover {
+    color: darkgreen; }
+  #navigator span {
+    color: blue; }
+
+div.adminMain {
+  width: 100%; }
+  div.adminMain div.adminMainLeft {
+    width: 50%;
+    float: left; }
+    div.adminMain div.adminMainLeft div.adminMainLeftTop {
+      width: 100%;
+      height: 50px;
+      background: #5cb85c; }
+      div.adminMain div.adminMainLeft div.adminMainLeftTop div {
+        float: left; }
+      div.adminMain div.adminMainLeft div.adminMainLeftTop div.btn-group {
+        margin-top: 8px;
+        width: 10%; }
+      div.adminMain div.adminMainLeft div.adminMainLeftTop div.btn-op {
+        width: 90%;
+        /*div.first{margin-left:100px;}*/ }
+        div.adminMain div.adminMainLeft div.adminMainLeftTop div.btn-op div {
+          float: right; }
+        div.adminMain div.adminMainLeft div.adminMainLeftTop div.btn-op button {
+          outline: none;
+          margin-top: 6px;
+          float: right;
+          margin-right: 15px; }
+    div.adminMain div.adminMainLeft div.allUser {
+      float: left;
+      margin-left: 10%;
+      width: 30%;
+      overflow: auto;
+      height: 400px;
+      background: pink; }
+      div.adminMain div.adminMainLeft div.allUser button {
+        margin-top: 5px;
+        outline: none; }
+    div.adminMain div.adminMainLeft div.joinUser {
+      float: left;
+      width: 30%;
+      height: 400px;
+      overflow: auto;
+      background: pink;
+      margin-left: 20%; }
+      div.adminMain div.adminMainLeft div.joinUser button {
+        margin-top: 5px;
+        outline: none; }
+  div.adminMain div.adminMainRight {
+    width: 50%;
+    float: left; }
+
+.prj_add {
+  width: 100%; }
+  .prj_add textarea, .prj_add input {
+    width: 100%; }
+  .prj_add .btn-success {
+    float: right;
+    margin-right: 15px;
+    margin-top: 50px; }
+
+.timePiker {
+  width: 50%;
+  margin-left: 0px;
+  margin-top: 15px; }
+
+.floatLeft {
+  float: left; }
+
+.project {
+  cursor: pointer;
+  width: 92%;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px; }
+  .project div.top {
+    position: relative;
+    font-size: 14px;
+    background: #757575;
+    width: 100%;
+    height: 50px;
+    color: white; }
+    .project div.top span {
+      position: absolute; }
+  .project div.bottom {
+    width: 100%;
+    height: 10px;
+    background: #EEEEEE; }
+    .project div.bottom div.used {
+      height: 10px;
+      background: #1B5E20; }
+
+.project:hover {
+  border: solid 2px orangered; }
+
+.create-task {
+  float: left;
+  margin-left: 30px; }
+
+#taskList {
+  border: dashed 1px grey;
+  cursor: pointer;
+  width: 80%;
+  margin-top: 5px;
+  height: 20px;
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+  -moz-transition: width 0.2s ease; }
+  #taskList div {
+    font-size: 14px;
+    float: left;
+    width: 33%;
+    text-align: center;
+    height: 100%; }
+
+#taskList:hover {
+  border: solid 1px green;
+  width: 90%; }
+
+body {
+  padding: 0;
+  font-size: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+#main {
+  margin-top: 40px;
+  color: darkred; }
+
+#stage {
+  margin-top: 40px; }
+
+/*鐧婚檰鏍峰紡*/
+.bb-middle {
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 250px;
+  margin-top: 200px;
+  background-color: transparent; }
+
+.fullWidth {
+  width: 100%; }
+
+.center {
+  text-align: center; }
+
+/*# sourceMappingURL=cn.css.map */

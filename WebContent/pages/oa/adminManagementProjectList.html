@@ -1,0 +1,18 @@
+<div style="width:100%"  ng-repeat="project in projects">
+<div class="project">
+    <div class="top">
+     <span style="left:0px;top:0px;">项目名称：{{project.projectName}}</span>
+        <span style="top:0px;right:300px;">开始时间：{{project.startTime  | date:'yyyy-MM-dd'}}</span>
+        <span style="top:0px;right:0px;">预计完成：{{project.planEndTime  | date:'yyyy-MM-dd'}}</span>
+
+        <span style="bottom:0px;right:300px;">负责人：王叉叉</span>
+
+        <span style="bottom:0px;right:0px;">进行/累计：5/28</span>
+
+    </div>
+    <div class="bottom">
+        <div class="used" style="width: 20%"></div>
+        <div class="total"></div>
+    </div>
+</div>
+</div>

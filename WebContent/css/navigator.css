@@ -1,0 +1,18 @@
+#navigator {
+  background-color: #757575;
+  opacity: 0.7;
+  position: fixed;
+  height: 40px;
+  top: 0px;
+  width: 100%; }
+  #navigator div {
+    cursor: pointer;
+    font-size: 26px;
+    text-align: center;
+    color: white; }
+  #navigator div:hover {
+    color: darkgreen; }
+  #navigator span {
+    color: darkviolet; }
+
+/*# sourceMappingURL=navigator.css.map */

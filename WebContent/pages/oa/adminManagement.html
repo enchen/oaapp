@@ -1,0 +1,27 @@
+<div class="adminMain">
+    <div class="adminMainLeft">
+        <div class="adminMainLeftTop">
+            <div class="btn-group" uib-dropdown dropdown-append-to-body>
+                <button id="btn-append-to-to-body" type="button" class="btn btn-primary" uib-dropdown-toggle>
+                   项目状态选择 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-to-body">
+                    <li role="menuitem"><a href="#">全部</a></li>
+                    <li role="menuitem" ><a href="#" ng-click="runningPrj()">进行中/从新打开</a></li>
+                    <li role="menuitem"><a href="#">已完成</a></li>
+                    <li role="menuitem"><a href="#">暂停</a></li>
+                    <li role="menuitem"><a href="#">冻结</a></li>
+                </ul>
+            </div>
+            <div class="btn-op" >
+                <div ng-repeat="menu in menus">
+                <button  type="button" class="btn btn-primary" ng-click="opMethod(menu.usemethod)" ng-disabled="{{menu.enable}}" >{{menu.name}}</button>
+                </div>
+            </div>
+
+        </div>
+        <div ui-view="adminLeft" id="adminStage">
+        </div>
+    </div>
+    <div class="adminMainRight">右边</div>
+</div>

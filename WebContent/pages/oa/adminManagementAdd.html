@@ -1,0 +1,53 @@
+<div class="prj_add">
+    <div>项目名称:</div>
+    <input type="text" ng-model="projectName">
+    <div>详情描述:</div>
+    <textarea ng-model="projectContent"></textarea>
+    <div>开始时间:</div>
+    <!-- 时间选择 -->
+    <div class="timePiker">
+        <p class="input-group">
+            <input type="date" class="form-control" uib-datepicker-popup ng-model="dt" is-open="status.opened" datepicker-options="dateOptions"  ng-required="true" close-text="关闭" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+        </p>
+
+    </div>
+
+    <div>完成时间:</div>
+    <!-- 时间选择 -->
+    <div class="timePiker">
+        <p class="input-group">
+            <input type="date" class="form-control" uib-datepicker-popup ng-model="dt2" is-open="status2.opened" datepicker-options="dateOptions2"  ng-required="true" close-text="关闭" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open2($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+        </p>
+
+    </div>
+
+    <div>参与人员：</div>
+    <div style="width: 100%;height:400px;">
+    <div class="allUser">
+        <div class="center">全部</div>
+        <div class="fullWidth" ng-repeat="user in users">
+            <button type="button" class="btn btn-primary fullWidth"  ng-click="allClick(user.id)">{{user.name}}</button>
+        </div>
+    </div>
+
+    <div class="joinUser">
+        <div class="center">参与</div>
+        <div class="fullWidth" ng-repeat="user in userJoin">
+            <button type="button" class="btn btn-primary fullWidth"  ng-click="joinClick(user.id)">{{user.name}}</button>
+        </div>
+    </div>
+    </div>
+    <div style="display:block;width: 100%;margin-top:20px;">指定负责人：</div>
+<div>
+
+    <select class="form-control" ng-model="keyPerson"  ng-options="f.name for f in userJoin"><option></option></select>
+</div>
+    <div class="btn btn-success" ng-click="save()">保存</div>
+
+</div>

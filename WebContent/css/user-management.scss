@@ -1,0 +1,23 @@
+.create-task{float:left;margin-left: 30px;}
+#taskList
+{
+  border:dashed 1px grey; ;cursor:pointer;width: 80%;margin-top:5px;
+  height:20px;
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+  -moz-transition: width 0.2s ease;
+div{
+  font-size:14px;
+  float: left;
+  width:33%;
+  text-align: center;
+  height:100%;
+
+}
+
+}
+#taskList:hover
+{
+  border:solid 1px green ;
+  width: 90%;
+}

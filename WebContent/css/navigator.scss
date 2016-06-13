@@ -1,0 +1,30 @@
+/*µ¼º½À¸ÑùÊ½*/
+$navigator-color:#757575;
+$navigator-height:40px;
+@mixin navigator-font
+{
+  font-size: 26px;
+  text-align: center;
+  color: white;
+}
+#navigator
+{
+  background-color: $navigator-color;
+  opacity: 0.7;
+  position: fixed;
+  height: $navigator-height;
+  top:0px;
+  width: 100%;
+  div{
+    cursor: pointer;
+    @include navigator-font;
+  }
+  div:hover
+  {
+    color:darkgreen;
+  }
+  span
+  {
+    color: blue;
+  }
+}

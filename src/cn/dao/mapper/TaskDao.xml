@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="cn.dao.TaskDao">
+  <insert id="createNewTask"  parameterType="Task">
+  insert into task(project_id,plan_end_time,plan_use_time,task_name,task_content,user_id,state)
+  values(#{projectId},#{planEndTime},#{planUseTime},#{taskName},#{taskContent},#{userId},0)
+  </insert>
+  <select id="getProjectList" resultType="Task">
+  SELECT t.user_id,t.task_id,u.name,t.task_name,t.plan_end_time from 
+task t,users u
+where t.project_id=#{0}
+and t.user_id=u.id
+ORDER BY t.user_id,t.plan_end_time
+
+  </select>
+  </mapper>
